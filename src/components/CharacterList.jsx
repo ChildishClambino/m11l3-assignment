@@ -17,7 +17,7 @@ const CharacterList = ({ onCharacterSelect }) => {
                 });
                 setCharacters(response.data.data.results);
             } catch (error) {
-                console.log('Error fetching characters:', error);
+                console.log('oh noooooo! WE COULD NOT FETCHHHHHHHHH!!!:', error);
             }
         };
 

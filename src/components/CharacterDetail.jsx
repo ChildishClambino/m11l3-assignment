@@ -1,4 +1,3 @@
-// src/components/CharacterDetail.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -19,7 +18,7 @@ const CharacterDetail = ({ character }) => {
                 });
                 setComics(response.data.data.results);
             } catch (error) {
-                console.log('Error fetching comics:', error);
+                console.log('AHHHHH THEY DID NOT MAKE IT:', error);
             }
         };
 
@@ -31,18 +30,18 @@ const CharacterDetail = ({ character }) => {
     };
 
     if (!character) {
-        return <div>Select a character to see details.</div>;
+        return <div>CLICK FOR DETAILS</div>;
     }
 
     return (
         <div>
             <h2>{character.name}</h2>
             <button onClick={handleToggleDetails}>
-                {showDetails ? 'Hide Details' : 'Show Details'}
+                {showDetails ? 'HIDE DEM DETAILS' : 'SHOW ME DEM DETAILS'}
             </button>
             {showDetails && (
                 <div>
-                    <p>{character.description || 'No description available'}</p>
+                    <p>{character.description || 'BOOO NO DESCRIPTION'}</p>
                     <h3>Comics:</h3>
                     <ul>
                         {comics.map(comic => (
